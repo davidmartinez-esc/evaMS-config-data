@@ -25,7 +25,7 @@ spring:
           uri: lb://ms-orders:8090
           predicates:
             - Path=/orders/**
-        - id: ms-products
-          uri: lb://ms-products:8091
+        - id: vehiculo-service
+          uri: lb://vehiculo-service:8091
           predicates:
-            - Path=/products/**
+            - Path=/api/v1/vehiculo/**
