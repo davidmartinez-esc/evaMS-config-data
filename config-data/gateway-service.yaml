@@ -33,3 +33,7 @@ spring:
           uri: lb://precio-por-rep-service:8092
           predicates:
             - Path=/api/v1/precioPorRep/**
+        - id: ingreso-service
+          uri: lb://ingreso-service:8093
+          predicates:
+            - Path=/api/v1/ingresoAReparacion/**
