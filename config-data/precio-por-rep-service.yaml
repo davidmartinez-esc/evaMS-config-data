@@ -1,8 +1,8 @@
 server:
-  port: 8091
+  port: 8092
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/vehiculos-bd
+    url: jdbc:postgresql://localhost:5432/precio-por-rep-bd
     username: postgres
     password: password
   jpa:
