@@ -14,17 +14,17 @@ spring:
       discovery:
         locator:
           enabled: true
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_UNIQUE
       globalcors:
         cors-configurations:
           '[/**]':
             allowedOrigins: "*"
             allowedMethods: "*"
             allowedHeaders: "*"
+            allow-credentials: true
       routes:
-        - id: ms-orders
-          uri: lb://ms-orders:8090
-          predicates:
-            - Path=/orders/**
+        
         - id: vehiculo-service
           uri: lb://vehiculo-service:8091
           predicates:
