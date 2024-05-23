@@ -33,3 +33,7 @@ spring:
           uri: lb://ingreso-service:8093
           predicates:
             - Path=/api/v1/ingresoAReparacion/**
+        - id: rdr-ingreso-service
+          uri: lb://rdr-ingreso-service:8094
+          predicates:
+            - Path=/api/v1/repEspecifica/**
