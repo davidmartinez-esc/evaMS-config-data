@@ -1,5 +1,5 @@
 server:
-  port: 8093
+  port: ${PORT:${SERVER_PORT:0}}
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/ingreso-a-rep-bd
@@ -10,7 +10,7 @@ spring:
       ddl-auto: update
 eureka:
   instance:
-    hostname: localhost
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
   client:
     fetch-registry: true
     register-with-eureka: true
