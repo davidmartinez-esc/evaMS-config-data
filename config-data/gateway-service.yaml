@@ -37,3 +37,7 @@ spring:
           uri: lb://rdr-ingreso-service
           predicates:
             - Path=/api/v1/repEspecifica/**
+        - id: descuentos-service
+          uri: lb://descuentos-service
+          predicates:
+            - Path=/api/v1/descuentosPorNRep/**
