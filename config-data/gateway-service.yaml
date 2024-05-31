@@ -41,3 +41,7 @@ spring:
           uri: lb://descuentos-service
           predicates:
             - Path=/api/v1/descuentos/**
+        - id: recargos-service
+          uri: lb://recargos-service
+          predicates:
+            - Path=/api/v1/recargoPorKilometraje/**
