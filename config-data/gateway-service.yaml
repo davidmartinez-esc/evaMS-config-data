@@ -40,4 +40,4 @@ spring:
         - id: descuentos-service
           uri: lb://descuentos-service
           predicates:
-            - Path=/api/v1/descuentosPorNRep/**
+            - Path=/api/v1/descuentos/**
