@@ -36,7 +36,7 @@ spring:
         - id: rdr-ingreso-service
           uri: lb://rdr-ingreso-service
           predicates:
-            - Path=/api/v1/repEspecifica/**, /api/v1/descuentoAplicado/**,/api/v1/bonoAplicado/**
+            - Path=/api/v1/repEspecifica/**
         - id: descuentos-service
           uri: lb://descuentos-service
           predicates:
@@ -45,3 +45,7 @@ spring:
           uri: lb://recargos-service
           predicates:
             - Path=/api/v1/recargoPorKilometraje/**,/api/v1/recargoPorAntiguedad/**,/api/v1/recargos/**
+        - id: bonos-aplicados-service
+          uri: lb://bonos-aplicados-service
+          predicates:
+            - Path=/api/v1/bonoAplicado/**
