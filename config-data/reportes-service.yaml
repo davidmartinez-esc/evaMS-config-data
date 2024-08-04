@@ -1,13 +1,9 @@
 server:
   port: ${PORT:${SERVER_PORT:0}}
 spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/vehiculo-bd
-    username: postgres
-    password: password
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
 eureka:
   instance:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
